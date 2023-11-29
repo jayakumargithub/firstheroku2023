@@ -1,0 +1,15 @@
+{
+    "bangalore" :[
+        {
+        "name" : "Ajay Sharma",
+        "area" : "Vijayanagar"
+        },{
+            "name" :"Ramesh",
+            "area" : "Jayanagar"
+        },
+        {
+            "name" : "Asha",
+            "area" : "Mahalakshami Layout"
+        }
+]
+}
