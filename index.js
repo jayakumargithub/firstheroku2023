@@ -37,10 +37,6 @@ app.get('/product/:id', async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
-
-app.listen(port, () => {
-    console.log('App is listening to port ${port}')
-})
 app.post('/product', async (req, res) => {
     try {
         const product = await Product.create(req.body)
@@ -81,6 +77,11 @@ app.delete('/product/:id', async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
+
+app.listen(port, () => {
+    console.log('App is listening to port ${port}')
+})
+
 // mongoose.connect('mongodb+srv://jayakumarsf2020:Dec122023!@testnodeapi.pnthbup.mongodb.net/myCollection?retryWrites=true&w=majority')
 //     .then(() => {
 //         console.log("connected to MongoDB")
