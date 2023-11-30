@@ -3,6 +3,7 @@ const app = express()
 const customers = require('./customs.json')
 const mongoose = require('mongoose')
 const Product = require('./models/productModel')
+const dotnev = require('dotenv').config()
 
 const port = process.env.PORT || 3001
 
@@ -80,11 +81,15 @@ app.delete('/product/:id', async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
-mongoose.connect(process.env.MONGODB_URL)
-    .then(() => {
-        console.log("connected to MongoDB")
-        app.listen(3002, () => { console.log(`Node API app is running on port 3002`) })
-    }).catch((error) => { console.log(error) })
+// mongoose.connect('mongodb+srv://jayakumarsf2020:Dec122023!@testnodeapi.pnthbup.mongodb.net/myCollection?retryWrites=true&w=majority')
+//     .then(() => {
+//         console.log("connected to MongoDB")
+//         app.listen(3002, () => { console.log(`Node API app is running on port 3002`) })
+//     }).catch((error) => { console.log(error) })
+
+mongoose.connect(process.env.MONGODB_URL).then((success) => app.listen(3002)).catch((err) => console.log(err.message))
+
+
 
 
 
