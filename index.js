@@ -4,8 +4,8 @@ const customers = require('./customs.json')
 const mongoose = require('mongoose')
 const Product = require('./models/productModel')
 const dotnev = require('dotenv').config()
-
 const port = process.env.PORT || 3001
+//git push heroku master > to push to heroku
 
 app.use(express.json())
 
@@ -40,7 +40,7 @@ app.get('/product/:id', async (req, res) => {
 app.post('/product', async (req, res) => {
     try {
         console.log('making post call')
-        console.log('req.body:' + req.body)
+        console.log('req.body:' + JSON.stringify(req.body))
         const product = await Product.create(req.body)
         res.status(200).json(product);
     } catch (error) {
