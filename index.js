@@ -40,6 +40,7 @@ app.get('/product/:id', async (req, res) => {
 app.post('/product', async (req, res) => {
     try {
         console.log('making post call')
+        console.log('req.body:' + req.body)
         const product = await Product.create(req.body)
         res.status(200).json(product);
     } catch (error) {
