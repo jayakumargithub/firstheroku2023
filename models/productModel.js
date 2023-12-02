@@ -13,7 +13,7 @@ const productSchema = mongoose.Schema(
         },
         price: {
             type: Number,
-            // required: true
+            required: true
         },
         image: {
             type: String,
@@ -21,7 +21,7 @@ const productSchema = mongoose.Schema(
         },
         accountId: {
             type: String,
-            // required: true
+            required: true
         }
     },
     {
