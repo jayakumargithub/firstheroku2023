@@ -8,12 +8,12 @@ const productSchema = mongoose.Schema(
         },
         quantity: {
             type: Number,
-            required: true,
+            // required: true,
             default: 0
         },
         price: {
             type: Number,
-            required: true
+            // required: true
         },
         image: {
             type: String,
@@ -21,7 +21,7 @@ const productSchema = mongoose.Schema(
         },
         accountId: {
             type: String,
-            required: true
+            // required: true
         }
     },
     {
