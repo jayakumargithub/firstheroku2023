@@ -18,6 +18,10 @@ const productSchema = mongoose.Schema(
         image: {
             type: String,
             required: false,
+        },
+        accountId: {
+            type: String,
+            required: true
         }
     },
     {
