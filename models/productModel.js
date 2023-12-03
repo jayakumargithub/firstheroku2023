@@ -22,6 +22,9 @@ const productSchema = mongoose.Schema(
         accountId: {
             type: String,
             required: true
+        },
+        sendToExternal: {
+            type: Boolean
         }
     },
     {
